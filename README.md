@@ -2,13 +2,16 @@
 
 mewmew apex legends waooo!!:3 named after one of my mains
 
-## Project Setup and Execution
+## Getting Started
 
-This project consists of a simple collection of shell scripts. As of now, it only has one file: `stats-runner.sh`.
+The r5-catalyst project is made up of a few simple shell scripts:
 
-Follow the steps below to setup and run the project:
+- `stats-runner.sh`
+- `player.sh`
 
-1. **Environment Setup**: The project requires certain environment variables to be set. These variables should be declared in a `.env` file at the root of the project. If the file doesn't exist, create one.
-2. **Running the script**: After setting up the environment, run the `stats-runner.sh` script. This can be done by navigating to the project root in your terminal and executing the command `./stats-runner.sh`.
+To setup and run this project, follow these steps:
 
-Please ensure that you have the necessary permissions to execute the script. If the script is not executable, you might need to run `chmod +x stats-runner.sh` to make it executable.
+1. **Prepare Your Environment**: Certain variables need to be defined in the environment for the project to work correctly. These variables are stored in a `.env` file located at the project's root level. If this file is missing, create one.
+2. **Script Execution**: Once the environment is ready, you can run the scripts. To do this, open your terminal, navigate to the root of the project, and use the command `./<script name>`.
+
+Before executing, ensure that the scripts have the correct permissions. If not, you might need to modify the script's permissions using `chmod +x <script name>` to allow execution.
