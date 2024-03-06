@@ -4,7 +4,7 @@ keys.sh
 # Ignore directories
 keys/
 match_stats/
-report/
+reports/
 
 
 # Ignore .env
