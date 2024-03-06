@@ -1,14 +1,23 @@
 #!/bin/bash
 
-# Source from .env
+# Load environment variables
 source .env
+source $KEYS_FILE
 
-# Create output directory if it doesn't exist
+# Ensure output directory exists
 mkdir -p $OUTPUT_DIR
 
-# Iterate over keys
+# Function to fetch API data
+fetch_data() {
+  local key=$1
+  local output_file="$OUTPUT_DIR/$key.json"
+
+  echo "Fetching data for key: $key"
+  curl -s "$API_URL?token=$key" -o $output_file
+  echo "Response saved to $output_file"
+}
+
+# Fetch data for each key
 for key in ${keys[@]}; do
-  # Use curl to send GET request to API and save response to file
-  curl -s $API_URL?token=$key -o $OUTPUT_DIR/$key.json
-  echo "Response for key $key saved to $OUTPUT_DIR/$key.json"
+  fetch_data $key
 done
