@@ -1,0 +1,5 @@
+# Ignore 'keys.sh' file
+keys.sh
+
+# Ignore 'keys' directory
+keys/
