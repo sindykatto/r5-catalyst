@@ -1,5 +1,9 @@
 # Ignore 'keys.sh' file
 keys.sh
 
-# Ignore 'keys' directory
+# Ignore directories
 keys/
+output/
+
+# Ignore .env
+.env
