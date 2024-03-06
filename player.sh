@@ -20,7 +20,7 @@ done
 # Create or overwrite the output file
 : > $OUTPUT_MARKDOWN
 for nidHash in "${!nidHashToPlayerName[@]}"; do
-  echo -e "Hash $nidHash" >> $OUTPUT_MARKDOWN
+  echo -e "$nidHash" >> $OUTPUT_MARKDOWN
   # Display each playerName
   IFS=', ' read -r -a playerNameArray <<< "${nidHashToPlayerName[$nidHash]}"
   for playerName in "${playerNameArray[@]}"; do
@@ -29,6 +29,3 @@ for nidHash in "${!nidHashToPlayerName[@]}"; do
   echo "" >> $OUTPUT_MARKDOWN
 done
 echo "Output stored in $OUTPUT_MARKDOWN"
-
-
-
